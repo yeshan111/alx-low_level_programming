@@ -4,16 +4,18 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char i;
+	char c, d;
 
-	i = 0;
-
-	while (i > 'e')
+	for (c = 0 ; c <= 9 ; c++)
 	{
-		printf("%x", i);
-		i = i + 1;
+		putchar(c);
+	}
+	for (d = 'a' ; d <= 'e' ; d++)
+	{
+		putchar(d);
 	}
 	putchar('\n');
 	return (0);
