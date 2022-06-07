@@ -6,13 +6,16 @@
  */
 int main(void)
 {
-	int n;
+	long pri = 1, sec = 2, sum;
 
-	for (n = 1; n <= 50; n++)
+	printf("1, 2");
+	while (sum < 20365011073)
 	{
-		n = (n - 1) + (n - 2);
-		printf("%d, ", n);
+		sum = pri + sec;
+		printf(", %lu", sum);
+		pri = sec;
+		sec = sum;
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
