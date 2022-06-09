@@ -6,14 +6,12 @@
  */
 int main(void)
 {
-	int i, j, Number, isPrime;
+	int i, j, num, isPrime;
 
-	printf("\n Please Enter any number to Find Factors :  ");
-	scanf("%d", &Number);
-
-	for (i = 2; i <= Number; i++)
+	num = 612852475143;
+	for (i = 2; i <= num; i++)
 	{
-		if (Number % i == 0)
+		if (num % i == 0)
 		{
 			isPrime = 1;
 			for (j = 2; j <= i / 2; j++)
@@ -30,5 +28,6 @@ int main(void)
 			}
 		}
 	}
+	printf("\n");
 	return (0);
 }
