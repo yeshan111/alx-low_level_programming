@@ -1,33 +1,24 @@
 #include <stdio.h>
 /**
- * main - finds prime factor
+ * main - main function
  *
- * Return: 0
+ * Return: returns 0
  */
 int main(void)
 {
-	int i, j, num, isPrime;
+	unsigned int a = 2;
+	unsigned long n = 612852475143;
 
-	num = 612852475143;
-	for (i = 2; i <= num; i++)
+	while (a != n)
 	{
-		if (num % i == 0)
+		if (n % a == 0)
 		{
-			isPrime = 1;
-			for (j = 2; j <= i / 2; j++)
-			{
-				if (i % j == 0)
-				{
-					isPrime = 0;
-					break;
-				}
-			}
-			if (isPrime == 1)
-			{
-				printf("\n %d is a Prime Factor ", i);
-			}
+			n = n / a;
+		} else
+		{
+			a++;
 		}
 	}
-	printf("\n");
+	printf("%lu\n", n);
 	return (0);
 }
