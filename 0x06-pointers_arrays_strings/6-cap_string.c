@@ -4,7 +4,7 @@
  * @s: accepts string array
  * Return: result
  */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
 	int i = 0;
 
