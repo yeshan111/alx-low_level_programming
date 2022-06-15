@@ -18,9 +18,10 @@ char *_strcat(char *dest, char *src)
 		d++;
 	}
 	i = 0;
-	for (c = d - 1; *dest != '\0'; c++)
+	for (c = d - 1; *dest[i] != '\0'; c++)
 	{
-		*dest[c] = *src[i];
+		dest[c] = src[i];
+		i++;
 	}
 	return (dest);
 }
