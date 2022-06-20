@@ -3,15 +3,26 @@
  * _strspn - gets the length of a prefix substring
  * @s: bytes
  * @accept: source
+ * Return: result
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
+	int i;
+	int j;
+	unsigned int r = 0;
 
-	i = 0;
-	while (accept[i] <= s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		i++;
+		for (j = 0; s[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				r++;
+				break;
+			}
+		}
+		if (s[j] == '\0')
+			return (r);
 	}
-	return (i);
+	return (r);
 }
