@@ -6,25 +6,22 @@
  * @argv: vector array
  * Return: 0
  */
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
-	int num, digit, sum = 0;
+	int i, n, sum = 0;
 
-	for (num = 1; num < argc; num++)
+	for (i = 1; i < argc; i++)
 	{
-		for (digit = 0; argv[num][digit]; digit++)
+		for (n = 0; argv[i][n]; n++)
 		{
-			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			if (argv[i][n] < '0' || argv[i][n] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-
-		sum += atoi(argv[num]);
+		sum += atoi(argv[i]);
 	}
-
 	printf("%d\n", sum);
-
 	return (0);
 }
