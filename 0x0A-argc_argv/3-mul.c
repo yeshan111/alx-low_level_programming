@@ -11,15 +11,17 @@ int main(int argc, char *argv[])
 {
 	int prod, x, y;
 
-	if (argv[1] == '\0' && argv[2] == '\0')
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		prod = argv[1] * argv[2];
-		printf("%d\n", prod);
-		return (0);
-	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	prod = x * y;
+
+	printf("%d\n", prod);
+
+	return (0);
 }
