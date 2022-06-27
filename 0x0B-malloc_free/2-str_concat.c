@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 /**
- * _strdup - Duplicate a string using malloc
- * @str: string to duplicate
- * Return: Pointer to a the new duped string
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
+ *
+ * Return: pointer of an array of chars
  */
-
 char *_strdup(char *str)
 {
-	char *a;
-	int i, c;
+	char *strout;
+	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
@@ -19,13 +19,13 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		;
 
-	a = malloc(i * sizeof(*a) + 1);
-	if (a == NULL)
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
 		return (NULL);
 
-	for (c = 0; c < i; c++)
-		a[c] = str[c];
-	a[c] = '\0';
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
 
-	return (a);
+	return (strout);
 }
