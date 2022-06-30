@@ -7,7 +7,7 @@
  * @argv: vector array for arguments
  * Return: product
  */
-int main(int argc, char *argv[])
+int main(unsigned long argc, char *argv[])
 {
 unsigned long mul;
 int i, j;
