@@ -1,9 +1,12 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- * main - multiplies two positive integers
- * @argc: arguments
- * @argv: vector array for arguments
- * Return: product
+ * main - multiplies two positive numbers
+ * @argc: n arguments
+ * @argv: args
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
@@ -16,9 +19,9 @@ int i, j;
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] > 57 || argv[i][j] < 48)
+			/*if (argv[i][j] > 57 || argv[i][j] < 48)
 			{  printf("Error\n");
-			exit(98); }
+			exit(98); }*/
 		}
 
 	}
