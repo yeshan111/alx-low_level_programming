@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 /**
  * print_strings - prints numbers
  * @separator: string between strings
@@ -13,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (seperator == NULL)
 	{
-		exit;
+		separator = "";
 	}
 	va_start(strings, n);
 		for (i = 0; i < n; i++)
