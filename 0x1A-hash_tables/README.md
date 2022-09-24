@@ -1,1 +1,1 @@
-0x1A. C - Hash tables
+File contains data for 0x1A-hash_tables
